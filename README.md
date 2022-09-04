@@ -4,6 +4,8 @@
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW) created using HTML, CSS, ReactJS and React Beautiful DnD.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/54f41448-34a6-4b96-944d-db94891e1c84/deploy-status)](https://app.netlify.com/sites/mspayneii-todo-app/deploys)
+
 ## Table of contents
 
 - [Overview](#overview)
