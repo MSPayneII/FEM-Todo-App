@@ -48,6 +48,7 @@ Users should be able to:
 - CSS custom properties
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [React Beautiful dnd](https://github.com/atlassian/react-beautiful-dnd) - Beautiful and accessible drag and drop for lists with React
 
 ### Useful resources
 
