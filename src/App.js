@@ -3,6 +3,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { sunIcon, moonIcon, crossIcon, checkIcon } from "./images";
 import ListViewBtns from "./components/ListViewBtns/ListViewBtns";
 import "./index.css";
+import { elementRoles } from "aria-query";
 
 const element = document.querySelector("body");
 let localDarkMode = localStorage.getItem("dark-mode");
@@ -37,6 +38,7 @@ function App() {
     const newToDoList = toDoList.filter((item) => item.id !== id);
     const newActiveList = activeList.filter((item) => item.id !== id);
     const newCompletedList = completedList.filter((item) => item.id !== id);
+
     setToDoList(newToDoList);
     setActiveList(newActiveList);
     setCompletedList(newCompletedList);
@@ -135,27 +137,26 @@ function App() {
       return;
     }
 
-    if (setShowAllItems) {
-      const items = Array.from(toDoList);
+    if (showAllItems) {
+      const items = [...toDoList];
       const [reorderedItem] = items.splice(result.source.index, 1);
       items.splice(result.destination.index, 0, reorderedItem);
       setToDoList(items);
     }
 
-    if (setShowActiveItems) {
-      const items = Array.from(activeList);
+    if (showActiveItems) {
+      const items = [...activeList];
       const [reorderedItem] = items.splice(result.source.index, 1);
       items.splice(result.destination.index, 0, reorderedItem);
       setActiveList(items);
     }
 
-    if (setShowCompletedItems) {
-      const items = Array.from(completedList);
+    if (showCompletedItems) {
+      const items = [...completedList];
       const [reorderedItem] = items.splice(result.source.index, 1);
       items.splice(result.destination.index, 0, reorderedItem);
       setCompletedList(items);
     }
-    return;
   };
 
   useEffect(() => {
