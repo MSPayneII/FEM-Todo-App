@@ -3,7 +3,6 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { sunIcon, moonIcon, crossIcon, checkIcon } from "./images";
 import ListViewBtns from "./components/ListViewBtns/ListViewBtns";
 import "./index.css";
-import { elementRoles } from "aria-query";
 
 const element = document.querySelector("body");
 let localDarkMode = localStorage.getItem("dark-mode");
